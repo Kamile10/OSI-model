@@ -1,0 +1,102 @@
+OSI  MODEL
+Introduction to OSI Model
+⦁	OSI model is based on the proposal developed by the International Standards Organization (ISO).
+⦁	This model is called ISO OSI (Open Systems Interconnection) Reference model because it deals with connecting open systems (systems that are open for communication with other systems)
+⦁	We call it as OSI Model.
+
+Principles on which OSI model was designed:
+⦁	A layer should be created where different level of abstraction is needed.
+⦁	Each layer should perform a well defined function.
+⦁	The function of each layer should be chosen according to the internationally standardized protocols.
+⦁	The number of layers should be large enough that distinct functions should not be put in the same layer and small enough that the architecture does not become very complex.
+
+OSI Model:
+1.	Physical
+2.	Data Limk
+3.	Network
+4.	Transport
+5.	Session
+6.	Presentation
+7.	Application
+
+PHYSICAL LAYER
+⦁	It is the bottom layer of OSI Model.
+⦁	It is responsible for the actual physical connection between the devices. Such physical connection may be made by using twisted pair cable.
+⦁	It is concerned with transmitting bits over a communication channel.
+FUNCTIONS OF PHYSICAL LAYER
+⦁	Transforming bits into signals 
+⦁	Provides synchronization of bits by a clock. 
+⦁	Physical layer manages the way a device connects to network media. 
+⦁	It defines the transmission rate. 
+⦁	It defines the way in which the devices are connected to the medium. 
+⦁	It provides physical topologies 
+⦁	It can use different techniques of multiplexing.
+DATA LINK LAYER
+⦁	It is responsible for node-to-node delivery of data. 
+⦁	It receives the data from network layer and creates FRAMES , add physical address to these frames & pas them to physical layer 
+⦁	It consist of 2 layers: 
+	Logical Link Layer (LLC) : Defines the methods and provides addressing information for communication between network devices.
+	Medium Access Control (MAC): establishes and maintains links between communicating devices. 
+FUNCTIONS OF THE LINK LAYER
+⦁	Framing : DLL divides the bits received from N/W layer into frames. (Frame contains all the addressing information necessary to travel from S to D).
+⦁	Physical addressing: After creating frames, DLL adds physical address of sender/receiver (MAC address) in the header of each frame.
+⦁	Flow Control: DLL prevents the fast sender from drowning the slow receiver.
+⦁	Error Control: It provides the mechanism of error control in which it detects & retransmits damaged or lost frames.
+⦁	Access Control: When single comm. Channel is shared by multiple devices, MAC layer of DLL provides help to determine which device has control over the channel.
+NETWORK LAYER
+⦁	It is ponsible for the source to destination delivery of a packet across multiple networks.
+⦁	If two systems are attached to different networks with devices like routers, then N/W layer is used.
+⦁	Thus DLL overseas the delivery of the packet between the two systems on same network and the network layer ensures that the packet gets its point of origin to its final destination.
+FUNCTIONS OF NETWORK LAYER
+⦁	Internetworking: It provides Internetworking.
+⦁	Logical Addressing: When packet is sent outside the network, N/W layer adds Logical (network) address of the sender & receiver to each packet. 
+⦁	Network addresses are assigned to local devices by n/w administrator and assigned dynamically by special server called DHCP (Dynamic Host Configuration Protocol)
+⦁	Routing: When independent n/w are connected to create internetwork several routes are available to send the data from S to D. These n/w are interconnected by routers & gateways that route the packet to final destination
+TRANSPORT LAYER
+⦁	It is responsible for process-to-process delivery of the entire message.
+⦁	TL looks after the delivery of entire message considering all its packets & make sure that all packets are in order. On the other hand n/w layer treated each packet independently.
+⦁	At the receiver side, TL provides services to application layer & takes services form n/w layer.
+⦁	At the source side, TL receives message from upper layer into packets and reassembles these packets again into message at the destination.
+⦁	Transport Layer provides two types of services:
+Connection Oriented Transmission: In this type of transmission the receiving devices sends an acknowledge back to the source after a packet or group of packet is received. It is slower transmission method.
+Connectionless Transmission: In this type of transmission the receiving devices does not sends an acknowledge back to the source. It is faster transmission method.
+
+FUNCTIONS OF TRANSPORT LAYER
+⦁	Segmentation of message into packet & reassembly of packets into message.
+⦁	Port addressing: Computers run several processes. TL header include a port address with each process.
+⦁	Flow Control: Flow control facility prevents the source form sending data packets faster than the destination can handle.
+⦁	Error control: TL ensures that the entire message arrives at the receiving TL without error.
+
+SESSION LAYER
+⦁	Session layer is the fifth layer of OSI Model
+⦁	It has the responsibility of beginning, maintaining and ending the communication between two devices, called session.
+⦁	It also provides for orderly communication between devices by regulating the flow of data.
+
+FUNCTIONS OF OF SESSIONAL LAYER
+⦁	Establishing, Maintaining and ending a session: When sending device first contact with receiving device, it sends syn (synchronization) packet to establish a connection & determines the order in which information will be sent. Receiver sends ack (acknowledgement). So the session can be set & end.
+⦁	Dialog Control: This function determines that which device will communicate first and the amount of data that will be sent.
+⦁	Dialog separation: Process of adding checkpoints & markers to the stream of data is called dialog separation.
+
+PRESENATION LAYER
+⦁	Presentation layer is the sixth layer of OSI Model.
+⦁	It is concerned with the syntax & semantics of the information exchanged between the two devices.
+⦁	It was designed for data encryption, decryption and compression.
+
+FUNCTIONS OF PRESENTATION LAYER
+⦁	Data Presentation or Translation: Because different computers use different encoding systems. It ensures that the data being sent is in the format that the recipient can process. 
+⦁	Data Encryption: PL provides this facility by which hides the information from everyone except the person who originally sent the information & the intended recipient. When encrypted data arrives at destination, PL decrypts the message.
+⦁	Data Compression: PL shrinks large amount of data into smaller pieces i.e. it reduces the size of data.
+
+APPLICATION LAYER
+⦁	It is the topmost i.e. seventh layer of OSI Model.
+⦁	It enables the user to access the network.
+⦁	It provides user interface & supports for services such as e-mail, file transfer, access to the world wide web.
+⦁	So it provides services to different user applications.
+
+FUNCTIONS OF APPLICATION LAYER
+⦁	Mail Services: This application provides various email services.
+⦁	File transfer & Access: It allows users to access files in a remote host, to retrieve files from remote computer for use etc.
+⦁	Remote log-in: A user can log into a remote computer and access the resources of that computer.
+⦁	Accessing the World Wide Web: Most common application today is the access of the World Wide Web.
+
+ 
